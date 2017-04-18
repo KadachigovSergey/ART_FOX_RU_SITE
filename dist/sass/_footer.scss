@@ -1,0 +1,120 @@
+footer {
+  position: relative;
+  .bg-light-dark {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    background: #392f28;
+    @media(max-width: 1199px) {
+      display: none;
+    }
+  }
+  .bg-dark {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    background: #241f1c;
+    @media(max-width: 1199px) {
+      width: 100%;
+    }
+  }
+  .container {
+    position: relative;
+    padding: 25px 0;
+    @media(max-width: 991px){
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      text-align: center;
+
+    }
+  }
+  .logo {
+    color: #886c50;
+    margin-left: 100px;
+    &:hover {
+      color: $colorGold;
+    }
+    @media(max-width: 991px) {
+      margin: 0;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+  .soc {
+    margin-right: 80px;
+    margin-top: 14px;
+    @media(max-width: 1599px) {
+      margin-right: 20px;
+    }
+    @media(max-width: 1199px) {
+      margin-right: 0;
+    }
+    @media(max-width: 991px) {
+      margin-left: 0;
+    }
+  }
+  .info {
+    font-family: $fontRoboto;
+    color: #faca69;
+    font-size: 16px;
+    margin-right: 78px;
+    margin-top: 20px;
+
+    @media(max-width: 1365px) {
+      margin-right: 0;
+    }
+    @media(max-width: 991px) {
+     display: flex;
+      flex-direction: column ;
+    }
+    li {
+      &:first-child {
+        margin-right: 46px;
+        @media(max-width: 1365px) {
+          margin: 0;
+        }
+        @media(max-width: 1199px) {
+          //margin: 0;
+          width: 175px;
+        }
+        @media(max-width: 991px) {
+          width: auto;
+        }
+        &+li{
+          @media(max-width: 991px){
+            margin-top: 15px;
+          }
+        }
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      a {
+        font-family: $fontRoboto;
+        font-weight: bold;
+        color: #886c50;
+        font-size: 24px;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        text-transform: uppercase;
+        &:hover {
+          color: #faca69;
+        }
+      }
+    }
+
+  }
+}

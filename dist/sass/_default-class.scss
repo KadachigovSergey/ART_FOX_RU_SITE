@@ -1,0 +1,242 @@
+.vertical-align::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-left: -4px;
+}
+
+.vertical-align > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fox-btn {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  font-family: $fontRoboto;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid transparent;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  padding: 15px 25px 12px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  &.fox-btn-dark {
+    background: $colorDark;
+    border-color: $colorDark;
+    &:hover {
+      //color: $colorOrange;
+    }
+    &:active {
+      border-color: #886c50;
+    }
+  }
+  &.fox-btn-orange {
+    background: $colorOrange;
+    border-color: $colorOrange;
+    &:hover {
+      background: $colorDark;
+      border-color: $colorDark;
+    }
+    &:active {
+      border-color: #886c50;
+    }
+    &.active {
+      background: $colorDark;
+      border-color: $colorDark;
+    }
+  }
+  &.fox-btn-green {
+    background: $colorGreen;
+    border-color: $colorGreen;
+    padding-left: 60px;
+    &:hover {
+      background: $colorGold;
+      border-color: $colorGold;
+    }
+    &:active {
+      border-color: #886c50;
+    }
+    &.arrow {
+      padding-right: 80px;
+      &::after {
+        color: #fff;
+
+      }
+    }
+  }
+  &.arrow {
+    padding-right: 45px;
+    &:hover {
+      &::after {
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+        transform: translateX(10px);
+      }
+    }
+    &::after {
+      content: "\ea3c";
+      font-family: $fontArtFox;
+      color: $colorOrange;
+      position: absolute;
+      font-size: 22px;
+      font-weight: 100;
+      margin: -6px 0 0 3px;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+    }
+  }
+}
+
+.wrap-btn {
+  text-align: center;
+}
+
+//TITLE
+.fox-title {
+  font-size: 60px;
+  font-family: $fontGothamPro;
+  color: $colorDark;
+  @media(max-width: 991px) {
+    font-size: 45px;
+  }
+  @media(max-width: 768px) {
+    text-align: center;
+    font-size: 40px;
+  }
+  @media(max-width: 400px) {
+    text-align: center;
+    font-size: 35px;
+  }
+  .orange-text {
+    font-weight: 900;
+    color: $colorOrange;
+  }
+}
+
+.icon {
+  &:before {
+    font-family: $fontArtFox;
+  }
+}
+
+.af-icons {
+  color: #886c50;
+  width: 51px;
+  height: 51px;
+  border: 2px solid #886c50;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  &:hover {
+    border-color: $colorOrange;
+    color: #fff;
+  }
+  &:before {
+    font-family: $fontArtFox;
+  }
+}
+
+.tell {
+  border-color: #faca69;
+  color: #faca69;
+  -webkit-transition: transform 1s, border-color .3s;
+  -moz-transition: transform 1s, border-color .3s;
+  -o-transition: transform 1s, border-color .3s;
+  transition: transform 1s, border-color .3s;
+  &:hover {
+    border-color: #886c50;
+  }
+  &:before {
+    content: "\e958";
+    font-size: 24px;
+  }
+}
+
+.vk {
+  &:before {
+    content: "\e901";
+    font-size: 26px;
+  }
+}
+
+.inst {
+  &:before {
+    content: "\e900";
+    font-size: 21px;
+  }
+}
+
+.face-book {
+  &:before {
+    content: "\ea90";
+    font-size: 24px;
+  }
+}
+
+.icon-fox-main {
+  &:before {
+    content: "\e904";
+    font-size: 30px;
+  }
+}
+
+.bg-text {
+  font-family: $fontGothamPro;
+  font-weight: 900;
+  color: $colorDark;
+  opacity: .08;
+  position: absolute;
+  z-index: 10;
+  font-size: 200px;
+  top: 180px;
+  letter-spacing: -5px;
+  width: 100%;
+  overflow: hidden;
+  &.bg-light {
+    color: #7a6f67;
+  }
+  @media(max-width: 991px) {
+    font-size: 150px;
+  }
+}
+
+.content-wrap {
+  padding-left: 81px;
+  @media(max-width: 1440px) {
+    padding-left: 115px;
+  }
+  @media(max-width: 768px) {
+    padding-left: 0;
+  }
+}
+
+.container {
+  overflow: hidden;
+}
+

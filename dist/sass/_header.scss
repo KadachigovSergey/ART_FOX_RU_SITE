@@ -1,0 +1,232 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  @media(max-width: 991px) {
+    position: fixed;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    background: transparent;
+  }
+  @media(max-width: 768px){
+    background: $colorOrange;
+  }
+  &.move-up {
+    @media(max-width: 991px) {
+      -webkit-transform: translateY(-63px);
+      -moz-transform: translateY(-63px);
+      -ms-transform: translateY(-63px);
+      -o-transform: translateY(-63px);
+      transform: translateY(-63px);
+    }
+  }
+  .mobile-header {
+    display: none;
+    width: 100%;
+    padding: 5px 15px;
+    @media(max-width: 991px) {
+      display: inline-block;
+    }
+    .logo {
+      span::before {
+        font-size: 50px;
+      }
+      ul {
+        font-size: 21px;
+        padding: 6px 0 0 3px;
+      }
+
+    }
+    & > .my-class {
+      margin-top: 3px;
+      display: flex;
+      position: relative;
+      z-index: 9999;
+      @media(max-width: 360px) {
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 7px;
+      }
+      li {
+        @media(max-width: 360px) {
+          padding-left: 3px;
+          padding-right: 3px;
+        }
+      }
+      .af-icons {
+        width: 45px;
+        height: 45px;
+        border-color: #886c50;
+        color: #886c50;
+        @media(max-width: 768px){
+          border-color: $colorDark;
+          color: $colorDark;
+        }
+        @media(max-width: 360px) {
+          width: 40px;
+          height: 40px;
+        }
+        &:hover {
+          border-color: $colorOrange;
+          color: #fff;
+          @media(max-width: 768px){
+            border-color: #886c50;
+          }
+        }
+      }
+    }
+    .fox-mob-btn {
+      &:hover {
+        .mobile-btn {
+          span {
+            background: #fff;
+          }
+        }
+      }
+      .mobile-btn {
+        position: relative;
+        background: transparent;
+        width: 28px;
+        height: 28px;
+        span {
+          position: absolute;
+          background: #886c50;
+          width: 100%;
+          height: 4px;
+          left: 0;
+          border-radius: 2px;
+          -webkit-transition: .3s;
+          -moz-transition: .3s;
+          -ms-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s;
+          @media(max-width: 768px){
+            background: $colorDark;
+          }
+          &:first-child {
+            top: 5px;
+          }
+          &:nth-child(2), &:nth-child(3) {
+            top: calc(50% - 2px);
+          }
+          &:last-child {
+            bottom: 5px;
+          }
+        }
+      }
+      &.open {
+        background: $colorDark;
+        .mobile-btn {
+          span {
+            background: #fff;
+            &:first-child {
+              -webkit-transform: translateY(-7px) scale(.3);
+              -moz-transform: translateY(-7px) scale(.3);
+              -ms-transform: translateY(-7px) scale(.3);
+              -o-transform: translateY(-7px) scale(.3);
+              transform: translateY(-7px) scale(.3);
+              opacity: 0;
+            }
+            &:last-child {
+              -webkit-transform: translateY(7px) scale(.3);
+              -moz-transform: translateY(7px) scale(.3);
+              -ms-transform: translateY(7px) scale(.3);
+              -o-transform: translateY(7px) scale(.3);
+              transform: translateY(7px) scale(.3);
+              opacity: 0;
+            }
+            &:nth-child(2) {
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+            &:nth-child(3) {
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-wrap {
+    width: 100%;
+    position: relative;
+    @media(max-width: 991px) {
+      display: none;
+    }
+    .wrap-for-logo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    .container.for-logo {
+      padding: 27px 15px;
+      @media(max-width: 1199px) {
+        padding: 20px 15px;
+      }
+      @media(max-width: 991px) {
+        padding: 5px 15px;
+      }
+    }
+  }
+  .bg-dark, .bg-orange {
+    padding: 27px 0;
+    height: 160px;
+    @media(max-width: 1365px) {
+      height: 140px;
+    }
+    @media(max-width: 1199px) {
+      padding: 20px 0;
+      height: 120px;
+    }
+    @media(max-width: 991px) {
+      padding: 5px 0;
+      height: 90px;
+    }
+  }
+  .bg-dark {
+    ul {
+      margin: 13px 0 0 22px;
+      position: relative;
+      &:before {
+        content: "+7 (499) 346 68 07";
+        position: absolute;
+        font-family: $fontRoboto;
+        font-weight: bold;
+        left: 3px;
+        top: 60px;
+        font-size: 22px;
+        color: #fff;
+      }
+    }
+    li {
+      padding: 0;
+      & + li {
+        margin-left: 6px;
+      }
+    }
+  }
+  .bg-orange {
+    overflow: hidden;
+    padding-right: 15px;
+
+  }
+
+  .vk, .face-book, .inst {
+    position: relative;
+    z-index: 1000;
+  }
+
+}

@@ -1,0 +1,131 @@
+//NAV_MENU
+.nav-menu {
+  display: inline-block;
+  margin-left: 85px;
+  margin-top: 29px;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  &.open{
+    height: 100vh;
+  }
+  @media(max-width: 1365px) {
+    margin-left: 40px;
+  }
+  @media(max-width: 1199px) {
+    margin-left: 30px;
+  }
+  @media(max-width: 991px) {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: $colorOrange;
+  }
+
+  li {
+    float: left;
+    @media(max-width: 991px){
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+    & + li {
+      margin-left: 22px;
+      @media(max-width: 991px){
+        float: none;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+    a {
+      font-family: $fontRoboto;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $colorDark;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      letter-spacing: 4px;
+      @media(max-width: 1199px) {
+        letter-spacing: normal;
+        //font-size: 18px;
+      }
+      @media(max-width: 991px){
+        display: block;
+        font-size: 32px;
+      }
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+//LOGO
+.logo {
+  color: $colorDark;
+  float: left;
+  margin-left: 79px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  @media(max-width: 1365px) {
+    margin-left: 0;
+  }
+  &:hover {
+    color: $colorDark;
+  }
+  & > * {
+    float: left;
+  }
+  span:before {
+    content: "\e902";
+    font-family: $fontArtFox;
+    font-size: 80px;
+  }
+  ul {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-family: $fontGothamPro;
+    font-weight: 900;
+    font-size: 31px;
+    padding: 13px 0 0 3px;
+  }
+}
+
+.head-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 130px;
+  z-index: 1;
+}
+
+.bg-orange {
+  background: $colorOrange;
+  height: 100%;
+  width: 69.5%;
+  float: left;
+}
+
+.bg-dark {
+  background: $colorDark;
+  height: 100%;
+  width: 30.5%;
+  float: left;
+}
